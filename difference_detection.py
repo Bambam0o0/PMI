@@ -4,12 +4,12 @@ import cv2, os
 import numpy as np
 
 # Loading files
-ref_pathfile = "no_knife.jpg"
+ref_pathfile = "no_car.jpg"
 reference_image = cv2.imread(os.getcwd()+"\\"+ref_pathfile)
 reference_image = cv2.resize(reference_image, (450, 580)) #resizing the ref picture if too large
 gray_reference = cv2.cvtColor(reference_image, cv2.COLOR_BGR2GRAY)
 
-curr_pathfile = "knife.jpg"
+curr_pathfile = "car.jpg"
 current_image = cv2.imread(os.getcwd()+"\\"+curr_pathfile)
 current_image = cv2.resize(current_image, (reference_image.shape[1], reference_image.shape[0])) #resizing to the ref picture size
 gray_current = cv2.cvtColor(current_image, cv2.COLOR_BGR2GRAY)
